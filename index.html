@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Documentation</h1>
+            </div>
+            <!-- Add inside sidebar-header div at the top of sidebar -->
+            <button class="hamburger-menu" id="sidebarToggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="navigation">
+                <ul class="nav-list">
+                    <li>
+                        <div class="nav-item">
+                            <span>Backend</span>
+                            <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="nav-item">
+                                    <span>FlaskAPI</span>
+                                    <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="nav-item">
+                                            <span>apiBasic</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="nav-item">
+                                            <span>flaskAuth</span>
+                                            <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                                        </div>
+                                        <ul>
+                                            <li><a href="/Backend/FlaskAPI/FlaskAuth/flaskAuthDocs.html" class="nav-item">Flask LogIn/Signup Docs</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <div class="nav-item">
+                                    <span>DotNet</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <!--FRONTEND--> 
+                    <li>
+                        <div class="nav-item">
+                            <span>Frontend</span>
+                            <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="nav-item">
+                                    <span>HTML-CSS</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="nav-item">
+                                    <span>React</span>
+                                    <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <div class="nav-item">
+                                            <span>Components</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+        </aside>
+        <div class="content-body">
+
+            <h1 class="main-title">NYC GREATEST CS SERVER DOC PAGE</h1>
+            <h2 class="section-title">Group Pics</h2>
+            <div class="image-grid" id="imageGrid">
+                <!-- Images will be inserted here via JavaScript -->
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
