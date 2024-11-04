@@ -1,5 +1,5 @@
 """
-File Description: 
+File Description: Get the user model (database)
 """
 from . import db
 from flask_bcrypt import Bcrypt

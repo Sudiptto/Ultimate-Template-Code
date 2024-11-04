@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Usage Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        pre {
+            background-color: #e8f0fe;
+            padding: 15px;
+            border: 1px solid #0056b3;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            color: #d63384;
+        }
+        .comment {
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Usage Guide</h1>
+    <p>This guide explains how to use the signup and login routes of the API.</p>
+
+    <h2>Signup Route</h2>
+    <p>Endpoint: <code>/signup</code></p>
+    <p>Method: <code>POST</code></p>
+    <p>Sample Request Body:</p>
+    <pre><code>{
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "john_doe",
+    "email": "john@example.com",
+    "password": "securepassword123"
+}</code></pre>
+
+    <h3>Python</h3>
+    <pre><code><span class="comment"># Import the requests library</span>
+import requests
+
+<span class="comment"># Define the URL and the data payload</span>
+url = 'http://localhost:5000/signup'
+data = {
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "john_doe",
+    "email": "john@example.com",
+    "password": "securepassword123"
+}
+
+<span class="comment"># Send a POST request to the signup endpoint</span>
+response = requests.post(url, json=data)
+<span class="comment"># Print the response from the server</span>
+print(response.json())</code></pre>
+
+    <h3>JavaScript</h3>
+    <pre><code><span class="comment">// Send a POST request using the Fetch API</span>
+fetch('http://localhost:5000/signup', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        firstName: 'John',
+        lastName: 'Doe',
+        username: 'john_doe',
+        email: 'john@example.com',
+        password: 'securepassword123'
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));</code></pre>
+
+    <h3>TypeScript</h3>
+    <pre><code><span class="comment">// Import the fetch function from node-fetch</span>
+import fetch from 'node-fetch';
+
+<span class="comment">// Define the URL and the data payload</span>
+const url = 'http://localhost:5000/signup';
+const data = {
+    firstName: 'John',
+    lastName: 'Doe',
+    username: 'john_doe',
+    email: 'john@example.com',
+    password: 'securepassword123'
+};
+
+<span class="comment">// Send a POST request to the signup endpoint</span>
+fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));</code></pre>
+
+    <h3>HTTPS Method</h3>
+    <pre><code>POST /signup HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Content-Length: 123
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "username": "john_doe",
+    "email": "john@example.com",
+    "password": "securepassword123"
+}</code></pre>
+
+    <h2>Login Route</h2>
+    <p>Endpoint: <code>/login</code></p>
+    <p>Method: <code>POST</code></p>
+    <p>Sample Request Body:</p>
+    <pre><code>{
+    "email": "john@example.com",
+    "password": "securepassword123"
+}</code></pre>
+
+    <h3>Python</h3>
+    <pre><code><span class="comment"># Import the requests library</span>
+import requests
+
+<span class="comment"># Define the URL and the data payload</span>
+url = 'http://localhost:5000/login'
+data = {
+    "email": "john@example.com",
+    "password": "securepassword123"
+}
+
+<span class="comment"># Send a POST request to the login endpoint</span>
+response = requests.post(url, json=data)
+<span class="comment"># Print the response from the server</span>
+print(response.json())</code></pre>
+
+    <h3>JavaScript</h3>
+    <pre><code><span class="comment">// Send a POST request using the Fetch API</span>
+fetch('http://localhost:5000/login', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        email: 'john@example.com',
+        password: 'securepassword123'
+    })
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));</code></pre>
+
+    <h3>TypeScript</h3>
+    <pre><code><span class="comment">// Import the fetch function from node-fetch</span>
+import fetch from 'node-fetch';
+
+<span class="comment">// Define the URL and the data payload</span>
+const url = 'http://localhost:5000/login';
+const data = {
+    email: 'john@example.com',
+    password: 'securepassword123'
+};
+
+<span class="comment">// Send a POST request to the login endpoint</span>
+fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));</code></pre>
+
+    <h3>HTTPS Method</h3>
+    <pre><code>POST /login HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+Content-Length: 67
+
+{
+    "email": "john@example.com",
+    "password": "securepassword123"
+}</code></pre>
+</body>
+</html>
