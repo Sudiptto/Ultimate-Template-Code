@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add to script.js
 async function loadImages() {
     try {
-        const response = await fetch('/allImages.json');
+        const response = await fetch('./allImages.json');
         const imageData = await response.json();
         const imageGrid = document.getElementById('imageGrid');
         
